@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://villakroloekke.dk/sitemap.xml
+
