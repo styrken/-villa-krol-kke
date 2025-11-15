@@ -1220,6 +1220,18 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        height: auto;
+        min-height: 60px;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .logo {
+        height: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1227,7 +1239,7 @@ footer {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 60px;
         flex-direction: column;
         background-color: var(--color-white);
         width: 100%;
@@ -1236,7 +1248,7 @@ footer {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: var(--spacing-md) 0;
         gap: 0;
-        max-height: calc(100vh - 70px);
+        max-height: calc(100vh - 60px);
         overflow-y: auto;
     }
 
@@ -1322,15 +1334,76 @@ footer {
         font-size: var(--font-size-3xl);
     }
 
-    .content-grid {
-        grid-template-columns: 1fr;
+    .page-header {
+        padding: var(--spacing-lg) var(--spacing-md);
     }
 
-    .content-grid.reverse .content-image {
+    .page-header h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-md);
+    }
+
+    .content-grid.reverse {
+        grid-template-columns: 1fr !important;
+    }
+
+    .content-grid .content-image {
+        order: -1;
+    }
+
+    .content-grid .content-text {
         order: 0;
     }
 
+    .content-grid.reverse .content-image {
+        order: -1;
+    }
+
+    .content-grid.reverse .content-text {
+        order: 0;
+    }
+
+    .content-text {
+        text-align: left !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content-text h2 {
+        font-size: var(--font-size-2xl);
+        text-align: left;
+        width: 100%;
+    }
+
+    .content-text h3 {
+        font-size: var(--font-size-xl);
+        text-align: left;
+        width: 100%;
+    }
+
+    .content-image {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+
     .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1356,15 +1429,90 @@ footer {
         padding: 0 var(--spacing-sm);
     }
 
+    .nav-container {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        min-height: 50px;
+    }
+
+    .logo {
+        height: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     .logo img {
         height: 100%;
+    }
+
+    .nav-menu {
+        top: 50px;
+        max-height: calc(100vh - 50px);
+    }
+
+    .page-header {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .page-header h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .page-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    section {
+        padding: var(--spacing-md) 0;
     }
 
     .intro-grid,
     .features-grid,
     .qualifications-grid,
-    .info-grid {
+    .info-grid,
+    .pricing-grid,
+    .checklist-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .content-grid.reverse {
+        grid-template-columns: 1fr !important;
+    }
+
+    .content-grid .content-image {
+        order: -1;
+    }
+
+    .content-grid .content-text {
+        order: 0;
+    }
+
+    .content-text {
+        text-align: left !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content-text h2 {
+        font-size: var(--font-size-xl);
+        text-align: left;
+        width: 100%;
+    }
+
+    .content-text h3 {
+        font-size: var(--font-size-lg);
+        text-align: left;
+        width: 100%;
+    }
+
+    .content-image {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
     }
 }
 
