@@ -1221,13 +1221,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
-        height: auto;
-        min-height: 60px;
-        padding: var(--spacing-sm) var(--spacing-md);
+        height: 60px;
+        padding: 0 var(--spacing-md);
     }
 
     .logo {
-        height: 50px;
+        height: 60px;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -1430,12 +1429,12 @@ footer {
     }
 
     .nav-container {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        min-height: 50px;
+        height: 50px;
+        padding: 0 var(--spacing-sm);
     }
 
     .logo {
-        height: 40px;
+        height: 50px;
         margin-top: 0;
         margin-bottom: 0;
     }
