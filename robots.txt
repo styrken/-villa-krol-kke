@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://villakroloekke.dk/sitemap.xml
+Sitemap: http://villakroloekke.dk/sitemap.xml
 
