@@ -1,0 +1,13 @@
+{
+  "name": "villa-krolokke",
+  "version": "1.0.0",
+  "description": "Villa Kroløkke - Privat Dagpleje",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
+    "start": "npx live-server --port=3000 --open=/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

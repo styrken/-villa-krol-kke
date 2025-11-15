@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Villa Kroløkke</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Villa Kroløkke Logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Forside</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Om os <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="om-mig.html">Om mig</a></li>
+                            <li><a href="om-dagplejen.html">Om pasningsordningen</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Information <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="en-typisk-dag.html">En typisk dag</a></li>
+                            <li><a href="priser.html">Priser og vilkår</a></li>
+                            <li><a href="ferie.html">Ferie og lukkedage</a></li>
+                            <li><a href="hvad-skal-med.html">Hvad skal med?</a></li>
+                            <li><a href="information.html">Sygdom</a></li>
+                            <li><a href="ledige-pladser.html">Ledige pladser</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Kontakt</h1>
+                <p class="page-subtitle">Kom i kontakt med Villa Kroløkke</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Kontaktoplysninger</h2>
+                        <div class="contact-item">
+                            <div class="contact-icon">👤</div>
+                            <div>
+                                <h3>Lisa Kroløkke</h3>
+                                <p>Pasningsordning</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>Adresse</h3>
+                                <p>Rismarksvej 14<br>5200 Odense V</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h3>Telefon</h3>
+                                <p><a href="tel:40626166">40 62 61 66</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:Lisa_kroloekke@hotmail.com">Lisa_kroloekke@hotmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send en besked</h2>
+                        <p>Har du spørgsmål eller vil du høre mere om Villa Kroløkke? Udfyld formularen nedenfor, så vender jeg tilbage til dig hurtigst muligt.</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Navn *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Besked *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send besked</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit-section">
+            <div class="container">
+                <h2 class="section-title">Besøg Villa Kroløkke</h2>
+                <p>Du er velkommen til at kontakte mig for at aftale et besøg. Det er en god mulighed for at se faciliteterne, møde mig og stille alle de spørgsmål, du måtte have.</p>
+                <p>Jeg glæder mig til at høre fra dig!</p>
+            </div>
+        </section>
+
+        <section class="image-showcase">
+            <div class="container">
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <img src="assets/E2CB29C3-9259-4BAE-9461-47F82B4073F8.png" alt="Villa Kroløkke">
+                    </div>
+                    <div class="showcase-item">
+                        <img src="assets/EDD23B67-C7A1-47FA-B56A-31220B4DA28B.png" alt="Dagpleje">
+                    </div>
+                    <div class="showcase-item">
+                        <img src="assets/EE0068F6-B480-4C51-8FA9-A05185D21463.png" alt="Aktiviteter">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Villa Kroløkke</h3>
+                    <p>Privat pasningsordning i Bolbro, Odense V</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>Lisa Kroløkke</p>
+                    <p>Rismarksvej 14<br>5200 Odense V</p>
+                    <p><a href="tel:40626166">40 62 61 66</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="om-mig.html">Om mig</a></li>
+                        <li><a href="om-dagplejen.html">Om pasningsordningen</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Villa Kroløkke. Alle rettigheder forbeholdes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Live reload for development -->
+    <script src="live-reload.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+# Villa Kroløkke - Coding Rules
+
+## Language & Tone
+- Always use "jeg" (I) form, never "vi" (we) form
+- This is a private daycare run by one person (Lisa Kroløkke)
+- Use Danish language throughout the website
+- Keep tone warm, friendly, and professional
+
+## Code Style
+- Use semantic HTML5 elements
+- Follow consistent indentation (spaces, not tabs)
+- Use descriptive class names following BEM-like conventions
+- Keep CSS organized with clear sections
+- Use modern CSS features (CSS variables, flexbox, grid)
+- Ensure responsive design for mobile, tablet, and desktop
+
+## File Structure
+- HTML files: Use descriptive names (e.g., `om-mig.html`, `praktisk-info.html`)
+- CSS: Single `styles.css` file with organized sections
+- JavaScript: Single `script.js` file for all functionality
+- Images: Store in `assets/` folder
+
+## Content Guidelines
+- Always refer to Lisa Kroløkke in first person ("jeg")
+- Use "privat pasningsordning" NOT "privat dagpleje"
+- Mention her background: trained nurse (sygeplejerske) and mother of 4 children (ages 7 months to 12 years)
+- Location: Rismarksvej 14, 5200 Odense V i Bolbro (always mention Bolbro when referring to location)
+- Phone: 40 62 61 66
+- Opening hours: 7:00-16:00 Monday-Friday
+- Price: 9,200 kr/month, with municipality subsidy of 6,498 kr (2025)
+- Payment: Fixed transfer to account on first weekday of month
+
+## Design
+- Use light earth tones (beige, cream, light brown, terracotta)
+- Modern, clean design
+- Ensure good readability and accessibility
+- Use appropriate spacing and typography
+
+## Navigation
+- Use dropdown menus for grouped content
+- Keep navigation consistent across all pages
+- Mark active page in navigation
+
+## Testing
+- Test on multiple screen sizes
+- Ensure all links work correctly
+- Verify images load properly
+- Check Danish language accuracy
+
