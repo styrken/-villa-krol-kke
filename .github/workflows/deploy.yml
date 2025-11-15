@@ -1,0 +1,35 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: linux7.unoeuro.com
+        username: villakroloekke.dk
+        password: GkxeyaEAFgzD5tfw2m6p
+        local-dir: ./
+        server-dir: /public_html/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/.cursorrules
+          **/live-reload.js
+          **/package.json
+          **/package-lock.json
+          **/README.md
+          **/.github/**
+
