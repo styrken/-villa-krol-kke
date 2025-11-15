@@ -85,30 +85,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form Handling
+    // Contact Form Handling with Formspree
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form values
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            };
-
-            // Here you would typically send the form data to a server
-            // For now, we'll just show an alert
-            alert('Tak for din besked! Jeg vender tilbage til dig hurtigst muligt.\n\n' +
-                  'Navn: ' + formData.name + '\n' +
-                  'Email: ' + formData.email + '\n' +
-                  'Telefon: ' + (formData.phone || 'Ikke angivet') + '\n' +
-                  'Besked: ' + formData.message);
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
             
-            // Reset form
-            contactForm.reset();
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sender...';
+            
+            try {
+                // Get form values
+                const formData = new FormData(contactForm);
+                
+                // Send to Formspree
+                const response = await fetch('https://formspree.io/f/xvgdqlgy', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    alert('Tak for din besked! Jeg har modtaget den og vender tilbage til dig hurtigst muligt.');
+                    contactForm.reset();
+                } else {
+                    // Error from Formspree
+                    const data = await response.json();
+                    if (data.errors) {
+                        alert('Der opstod en fejl ved afsendelse af formularen. Prøv venligst igen eller kontakt mig direkte på Lisa_kroloekke@hotmail.com');
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                }
+            } catch (error) {
+                // Network error or other issue
+                console.error('Error:', error);
+                alert('Der opstod en fejl ved afsendelse af formularen. Prøv venligst igen eller kontakt mig direkte på Lisa_kroloekke@hotmail.com');
+            } finally {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 
