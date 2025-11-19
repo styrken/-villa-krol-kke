@@ -363,7 +363,7 @@ section {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-md);
 }
 
@@ -1612,6 +1612,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .holiday-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
@@ -1703,7 +1707,8 @@ footer {
     .qualifications-grid,
     .info-grid,
     .pricing-grid,
-    .checklist-grid {
+    .checklist-grid,
+    .gallery-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
