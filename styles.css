@@ -1198,6 +1198,7 @@ section {
     border-radius: 12px;
     text-align: center;
     margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
