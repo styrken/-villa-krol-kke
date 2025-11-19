@@ -937,6 +937,12 @@ section {
     margin-bottom: var(--spacing-xl);
 }
 
+@media (min-width: 1200px) {
+    .closed-days-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .closed-days-month {
     background-color: var(--color-white);
     padding: var(--spacing-lg);
@@ -1001,6 +1007,19 @@ section {
     color: var(--color-text);
     text-align: right;
     flex: 1;
+}
+
+.no-closed-days {
+    padding: var(--spacing-md);
+    text-align: center;
+    color: var(--color-text-light);
+    font-style: italic;
+    background-color: var(--color-cream);
+    border-radius: 8px;
+}
+
+.no-closed-days p {
+    margin: 0;
 }
 
 /* Checklist Section */
