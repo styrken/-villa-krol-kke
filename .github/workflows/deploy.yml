@@ -32,4 +32,6 @@ jobs:
           **/package-lock.json
           **/README.md
           **/.github/**
+        dangerous-clean-slate: false
+        dry-run: false
 
