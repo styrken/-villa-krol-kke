@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Kroløkke - Folder</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f0;
+            padding: 20px;
+        }
+        
+        .folder-container {
+            max-width: 21cm;
+            margin: 0 auto;
+            background: white;
+            padding: 2cm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #d4a574;
+            page-break-after: always;
+        }
+        
+        .header .logo {
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            color: #8b6f47;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .section.new-page {
+            page-break-before: always;
+        }
+        
+        .section.new-page {
+            page-break-before: always;
+        }
+        
+        
+        .section h2 {
+            font-size: 24px;
+            color: #8b6f47;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d4a574;
+        }
+        
+        .section h3 {
+            font-size: 18px;
+            color: #8b6f47;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .section p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: #f9f7f3;
+            border-left: 4px solid #d4a574;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .pricing-card {
+            background: #f9f7f3;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #d4a574;
+            border-radius: 8px;
+        }
+        
+        .pricing-card.highlight {
+            background: #fff8f0;
+            border-color: #8b6f47;
+        }
+        
+        .pricing-card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #8b6f47;
+        }
+        
+        .price-amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b6f47;
+            margin: 10px 0;
+        }
+        
+        .pricing-card p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .contact-info {
+            background: #f9f7f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .contact-info h3 {
+            margin-top: 0;
+        }
+        
+        .contact-info p {
+            margin: 8px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            background: #f9f7f3;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #d4a574;
+        }
+        
+        .feature-item h4 {
+            color: #8b6f47;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .feature-item p {
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+        }
+        
+        .folder-image {
+            max-width: 100%;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+            margin: 15px auto;
+            display: block;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            background: transparent;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            background: transparent;
+        }
+        
+        .image-grid img {
+            width: 100%;
+            max-height: 150px;
+            height: auto;
+            object-fit: cover;
+            page-break-inside: avoid;
+            background: transparent;
+        }
+        
+        .image-container {
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            margin: 15px 0;
+            background: transparent;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #d4a574;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .folder-container {
+                box-shadow: none;
+                padding: 1.5cm;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="folder-container">
+        <div class="header">
+            <br><br><br><br><br>
+            <img src="assets/logo.png" alt="Villa Kroløkke Logo" class="logo">
+            <h1>Villa Kroløkke</h1>
+            <p>Privat pasningsordning i Bolbro, Odense V</p>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="section">
+            <h2>Om mig</h2>
+            <p>Mit navn er Lisa Kroløkke, jeg er 33 år gammel, og jeg driver Villa Kroløkke - en privat pasningsordning i Bolbro, Odense V. Jeg bor sammen med min kæreste Rasmus og vores tilsammen 6 børn, i alderen 8 måneder til 12 år.</p>
+            
+            <p>Jeg er uddannet sygeplejerske, hvilket giver mig godt styr på førstehjælp og børnesundhed. Jeg har fokus på sundhed, hygiejne og sikkerhed i alt, jeg gør. Min erfaring som mor til 4 børn kombinerer jeg med min faglige baggrund, når jeg arbejder med børnene.</p>
+            
+            <p>Jeg ved, hvor vigtigt det er, at børn får den rette omsorg, tryghed og stimulans i deres hverdag, og jeg arbejder aktivt for at sikre dette.</p>
+        </div>
+
+        <div class="section">
+            <h2>Om pasningsordningen</h2>
+            <p>Villa Kroløkke er en privat pasningsordning beliggende på Rismarksvej 14, 5200 Odense V i Bolbro. Jeg tilbyder en tryg og omsorgsfuld hverdag for de mindste børn, hvor leg, læring og omsorg går hånd i hånd. I Villa Kroløkke er der plads til 5 børn i alderen 0 til 2,10 år.</p>
+            
+            <p>Villa Kroløkke er beliggende i en 100 år gammel murermestervilla med stor have til. Der er også en legeplads som nærmeste nabo, med direkte udgang fra haven til legepladsen.</p>
+            
+            <p>I min private pasningsordning skaber jeg en hjemlig atmosfære, hvor børnene kan trives og udvikle sig i deres eget tempo. Jeg har fokus på at skabe et miljø, hvor hvert barn føler sig set, hørt og omsorgsfuldt behandlet.</p>
+            
+            <br><br>
+            
+            <div class="image-container">
+                <div class="image-grid">
+                    <img src="assets/9DA134F4-9796-4080-9BAE-1BC0D48B2552.png" alt="Villa Kroløkke">
+                    <img src="assets/A573044A-E4FA-45A7-82C0-4DADC4400BBF.png" alt="Aktiviteter">
+                </div>
+            </div>
+        </div>
+
+        <div class="section new-page">
+            <h2>Hvad tilbyder jeg?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>🏠 Hjemlig atmosfære</h4>
+                    <p>Jeg skaber en tryg og hjemlig atmosfære, hvor børnene kan føle sig hjemme.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎨 Kreative aktiviteter</h4>
+                    <p>Hver dag er fyldt med forskellige aktiviteter - fra kreative projekter og leg til udendørs aktiviteter og læring gennem leg.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🌳 Udendørs aktiviteter</h4>
+                    <p>Jeg går meget udenfor med børnene og nyder naturen. Jeg har også en ladcykel, som jeg cykler på tur med børnene i.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🍎 Sund kost</h4>
+                    <p>Jeg serverer sund og varieret kost, der er tilpasset børnenes behov og alder.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>📚 Læring gennem leg</h4>
+                    <p>Jeg tror på, at børn lærer bedst gennem leg. Jeg arbejder meget med børnenes selvhjulpenhed og støtter dem i at blive mere selvstændige.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🤝 Tæt samarbejde</h4>
+                    <p>Jeg vægter tæt samarbejde med forældrene højt. Jeg holder jer løbende opdateret om jeres barns dag og udvikling.</p>
+                </div>
+            </div>
+            
+            <br><br>
+            
+            <div class="image-container">
+                <div class="image-grid">
+                    <img src="assets/A991A0C5-A3D7-409F-AB28-6AC620EC7D31.png" alt="Leg og aktiviteter">
+                    <img src="assets/A9FC6C75-6D51-4B57-AF6F-4C0F7EA89375.png" alt="Dagpleje miljø">
+                </div>
+            </div>
+        </div>
+
+        <div class="section new-page">
+            <h2>Priser & Tilskud 2026</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Takst</h3>
+                    <div class="price-amount">9.560 kr.</div>
+                    <p>Per barn per måned</p>
+                </div>
+                <div class="pricing-card highlight">
+                    <h3>Tilskud fra kommunen</h3>
+                    <div class="price-amount">6.858 kr.</div>
+                    <p>Per barn per måned (2026)</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Egenbetaling</h3>
+                    <div class="price-amount">2.702 kr.</div>
+                    <p>Per barn per måned</p>
+                    <p style="font-size: 12px; margin-top: 8px;">9.560 kr. - 6.858 kr. = 2.702 kr.</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>Betalingsinformation:</strong> Pladsen betales månedsvis forud. Der betales alle årets 12 måneder. <strong>9.560 kr. indsættes på min konto senest den sidste dag i måneden.</strong> Kommunens tilskud står til rådighed på din nem-konto mellem d. 10 og d. 15 i måneden.</p>
+            </div>
+            
+            <h3>Hvad er inkluderet?</h3>
+            <p>Min løn inkluderer feriepenge, pension, legetøj, ture ud af huset og mad til børnene. Der gives også søskenderabat til privat pasningsordning.</p>
+        </div>
+
+        <div class="section">
+            <h2>Ledige pladser</h2>
+            <div class="highlight-box">
+                <p><strong>Jeg har 3 ledige pladser med opstart:</strong></p>
+                <ul>
+                    <li>1 ledig plads 1. april 2026</li>
+                    <li>1 ledig plads 15. april 2026</li>
+                    <li>1 ledig plads 1. maj 2026</li>
+                </ul>
+            </div>
+            
+            <h3>Reservation af plads</h3>
+            <p>Det er muligt at reservere en plads – og jeg anbefaler, at I gør dette i god tid. Når I reserverer en plads, skal I betale <strong>1500 kr. i depositum</strong>. De kan ikke refunderes, men fratrækkes første måneds betaling.</p>
+        </div>
+
+        <div class="section new-page">
+            <h2>Praktisk information</h2>
+            <h3>Åbningstider</h3>
+            <p>Pasningsordningen er åben <strong>mandag til fredag fra kl. 7:00 til 16:00</strong>.</p>
+            
+            <h3>Ferie</h3>
+            <p>Jeg holder <strong>6 ugers ferie om året</strong> (5 hele uger + 1 uge spredt). Pasningsordningen er også lukket på alle helligdage og mellem jul og nytår.</p>
+            
+            <h3>Indmeldelse</h3>
+            <p>For at få udbetalt tilskud for den første måned til tiden, skal I sende ansøgningen senest en måned før, barnet starter i pasningsordningen. Ansøgningen om tilskud skal sendes til Odense Kommune.</p>
+            
+            <h3>Kontrakt</h3>
+            <p>Inden opstart underskriver vi en kontrakt, som laves ud fra Odense Kommunes standardkontrakt. Efter at I har været på besøg hos mig udleveres en kopi af kontrakten.</p>
+        </div>
+
+        <div class="section">
+            <h2>Kontakt</h2>
+            <div class="contact-info">
+                <h3>Lisa Kroløkke</h3>
+                <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V i Bolbro</p>
+                <p><strong>Telefon:</strong> 40 62 61 66</p>
+                <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+            </div>
+            
+            <p>Har I spørgsmål, er I meget velkomne til at kontakte mig. Jeg glæder mig til at møde jer og jeres barn!</p>
+        </div>
+
+        <div class="footer">
+            <p>Villa Kroløkke - Privat pasningsordning</p>
+            <p>Rismarksvej 14, 5200 Odense V i Bolbro | Tlf: 40 62 61 66</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+
