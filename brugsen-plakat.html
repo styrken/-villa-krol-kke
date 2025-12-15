@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Kroløkke - Plakat</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+        }
+        
+        .plakat-container {
+            max-width: 21cm;
+            margin: 0 auto;
+            background: white;
+            padding: 0.8cm;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-corner {
+            position: absolute;
+            top: 0.5cm;
+            right: 0.5cm;
+            width: 80px;
+            height: auto;
+            z-index: 10;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d4a574;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #8b6f47;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .section {
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            font-size: 15px;
+            color: #8b6f47;
+            margin-bottom: 4px;
+            padding-bottom: 2px;
+            border-bottom: 1.5px solid #d4a574;
+        }
+        
+        .section h3 {
+            font-size: 13px;
+            color: #8b6f47;
+            margin-top: 6px;
+            margin-bottom: 3px;
+        }
+        
+        .section p {
+            margin-bottom: 5px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .highlight-box {
+            background: #f9f7f3;
+            border-left: 3px solid #d4a574;
+            padding: 6px;
+            margin: 4px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 3px;
+        }
+        
+        .contact-info {
+            background: #f9f7f3;
+            padding: 6px;
+            border-radius: 6px;
+            margin: 4px 0;
+        }
+        
+        .contact-info p {
+            margin: 3px 0;
+            font-size: 12px;
+        }
+        
+        .contact-info strong {
+            color: #8b6f47;
+        }
+        
+        ul {
+            margin-left: 16px;
+            margin-bottom: 4px;
+        }
+        
+        ul li {
+            margin-bottom: 2px;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+        
+        .image-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px auto;
+            max-width: 85%;
+            align-items: center;
+            page-break-inside: avoid;
+        }
+        
+        .image-row img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .image-row img:nth-child(2) {
+            height: 180px;
+        }
+        
+        .footer {
+            margin-top: 6px;
+            padding-top: 4px;
+            border-top: 1.5px solid #d4a574;
+            text-align: center;
+            font-size: 9px;
+            color: #666;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            flex-shrink: 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .plakat-container {
+                padding: 0.8cm;
+                height: 100%;
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="plakat-container">
+        <img src="assets/logo.png" alt="Villa Kroløkke Logo" class="logo-corner">
+        <div class="header">
+            <h1>Villa Kroløkke</h1>
+            <p>Privat pasningsordning i Bolbro, Odense V</p>
+        </div>
+        
+        <div class="image-row">
+            <img src="assets/9DA134F4-9796-4080-9BAE-1BC0D48B2552.png" alt="Villa Kroløkke">
+            <img src="assets/A573044A-E4FA-45A7-82C0-4DADC4400BBF.png" alt="Aktiviteter">
+            <img src="assets/A991A0C5-A3D7-409F-AB28-6AC620EC7D31.png" alt="Leg og aktiviteter">
+        </div>
+        
+        <div class="content-grid">
+            <div class="column">
+                <div class="section">
+                    <h2>Hvem er jeg?</h2>
+                    <p>Mit navn er <strong>Lisa Kroløkke</strong>, 33 år, uddannet <strong>sygeplejerske</strong> og mor til 4 børn. Jeg driver Villa Kroløkke - en privat pasningsordning i Bolbro, Odense V.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Hvor bor jeg?</h2>
+                    <p><strong>Rismarksvej 14, 5200 Odense V i Bolbro</strong></p>
+                    <p>100 år gammel murermestervilla med stor have og direkte adgang til legeplads. Plads til <strong>5 børn i alderen 0 til 2,10 år</strong>.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Mine værdier</h2>
+                    <ul style="font-size: 10px;">
+                        <li><strong>Tryghed:</strong> Jeg skaber et miljø, hvor børnene føler sig sikre og trygge</li>
+                        <li><strong>Respekt:</strong> Jeg møder hvert barn med respekt for deres individuelle behov</li>
+                        <li><strong>Omsorg:</strong> Hvert barn skal føle sig set og hørt</li>
+                        <li><strong>Udvikling:</strong> Jeg støtter børnenes naturlige udvikling gennem leg og udforskning</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2>Hvad tilbyder jeg?</h2>
+                    <ul style="font-size: 10px;">
+                        <li>Hjemlig atmosfære i gammel murermestervilla</li>
+                        <li>Stor have med direkte adgang til legeplads</li>
+                        <li>Kreative aktiviteter og udendørs ture</li>
+                        <li>Sund kost og tæt samarbejde med forældre</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="section">
+                    <h2>Kontakt</h2>
+                    <div class="contact-info">
+                        <p><strong>Lisa Kroløkke</strong></p>
+                        <p><strong>Tlf:</strong> 40 62 61 66</p>
+                        <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                        <p><strong>Hjemmeside:</strong> <a href="http://villakroløkke.dk" style="color: #8b6f47; text-decoration: none;">villakroløkke.dk</a></p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>Åbningstider</h2>
+                    <p><strong>Mandag-fredag: 7:00-16:00</strong></p>
+                </div>
+                
+                <div class="section">
+                    <h2>Ledige pladser</h2>
+                    <div class="highlight-box">
+                        <p><strong>3 ledige pladser med opstart:</strong></p>
+                        <ul style="margin-top: 4px;">
+                            <li>1. april 2026</li>
+                            <li>16. april 2026</li>
+                            <li>1. maj 2026</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Villa Kroløkke - Privat pasningsordning | Rismarksvej 14, 5200 Odense V i Bolbro | Tlf: 40 62 61 66 | <a href="http://villakroløkke.dk" style="color: #8b6f47; text-decoration: none;">villakroløkke.dk</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
