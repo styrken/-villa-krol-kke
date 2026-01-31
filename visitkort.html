@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Kroløkke - Visitkort</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.8cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+        }
+        
+        .a4-container {
+            width: 21cm;
+            height: 29.7cm;
+            padding: 0.8cm;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 0.5cm;
+        }
+        
+        .visitkort {
+            width: 100%;
+            height: 100%;
+            border: 1px dashed #ccc;
+            padding: 0.5cm;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            page-break-inside: avoid;
+            position: relative;
+        }
+        
+        .visitkort-header {
+            display: flex;
+            align-items: center;
+            gap: 0.4cm;
+            margin-bottom: 0.3cm;
+            padding-bottom: 0.3cm;
+            border-bottom: 2px solid #d4a574;
+        }
+        
+        .visitkort-logo {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+        
+        .visitkort-title {
+            flex: 1;
+        }
+        
+        .visitkort-title h1 {
+            font-size: 16px;
+            color: #8b6f47;
+            margin: 0;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        .visitkort-title p {
+            font-size: 9px;
+            color: #666;
+            margin: 0;
+            font-style: italic;
+        }
+        
+        .visitkort-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.2cm;
+        }
+        
+        .visitkort-info {
+            font-size: 9px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .visitkort-info strong {
+            color: #8b6f47;
+            font-weight: 600;
+        }
+        
+        .visitkort-contact {
+            margin-top: 0.2cm;
+            padding-top: 0.2cm;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .visitkort-contact p {
+            font-size: 8.5px;
+            margin: 0.1cm 0;
+            color: #555;
+        }
+        
+        .visitkort-footer {
+            text-align: center;
+            margin-top: 0.2cm;
+            padding-top: 0.2cm;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .visitkort-footer p {
+            font-size: 8px;
+            color: #8b6f47;
+            margin: 0;
+        }
+        
+        .visitkort-footer a {
+            color: #8b6f47;
+            text-decoration: none;
+        }
+        
+        @media print {
+            .visitkort {
+                border: 1px dashed #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a4-container">
+        <!-- 8 visitkort -->
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+        
+        <div class="visitkort">
+            <div class="visitkort-header">
+                <img src="assets/logo.png" alt="Logo" class="visitkort-logo">
+                <div class="visitkort-title">
+                    <h1>Villa Kroløkke</h1>
+                    <p>Privat pasningsordning</p>
+                </div>
+            </div>
+            <div class="visitkort-content">
+                <div class="visitkort-info">
+                    <p><strong>Lisa Kroløkke</strong></p>
+                    <p>Uddannet sygeplejerske og mor til 4</p>
+                </div>
+                <div class="visitkort-contact">
+                    <p><strong>Tlf:</strong> 40 62 61 66</p>
+                    <p><strong>Email:</strong> Lisa_kroloekke@hotmail.com</p>
+                    <p><strong>Adresse:</strong> Rismarksvej 14, 5200 Odense V</p>
+                </div>
+            </div>
+            <div class="visitkort-footer">
+                <p><a href="http://villakroløkke.dk">villakroløkke.dk</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

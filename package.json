@@ -6,7 +6,8 @@
     "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
     "start": "npx live-server --port=3000 --open=/index.html",
     "generate-folder": "node generate-pdf.js",
-    "generate-plakat": "node generate-plakat-pdf.js"
+    "generate-plakat": "node generate-plakat-pdf.js",
+    "generate-visitkort": "node generate-visitkort-pdf.js"
   },
   "keywords": [],
   "author": "",
