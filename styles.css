@@ -895,6 +895,31 @@ section {
     font-size: var(--font-size-xl);
 }
 
+.holiday-list li.reserved {
+    color: var(--color-text-light);
+}
+
+.holiday-list li.reserved:before {
+    content: "–";
+    color: var(--color-text-light);
+    font-weight: normal;
+}
+
+.reserved-badge {
+    display: inline-block;
+    margin-left: var(--spacing-xs);
+    padding: 0.1rem 0.75rem;
+    background-color: var(--color-beige);
+    color: var(--color-dark-brown);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
 .holiday-note {
     background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-beige) 100%);
     padding: var(--spacing-md);
